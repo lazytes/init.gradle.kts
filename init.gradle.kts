@@ -6,7 +6,7 @@ fun ArtifactRepository.aliyunProxy() {
     if (this is MavenArtifactRepository) {
         when (name) {
             "Google" -> url = uri(`aliyun google`)
-            "BintrayJCenter" -> url = uri(`aliyun public`)
+            "MavenRepo", "BintrayJCenter" -> url = uri(`aliyun public`)
             "Gradle Central Plugin Repository" -> url = uri(`aliyun gradle-plugin`)
         }
     }
